@@ -94,7 +94,7 @@ class StopsController extends Controller
                                 foreach ($stops as $stop) {
                                     if ($stop->id == $routesWithRouteId[$k]->stop_id) {
                                         $stop = [
-                                            "Stop f{$backwardsStopNumber}" => $stop->name
+                                            "Stop {$backwardsStopNumber}" => $stop->name
                                         ];
                                         array_push($routesWithStops[$backwardsArrayIndex][$StartingAndFinalDestination], $stop);
                                         $backwardsStopNumber++;
@@ -108,7 +108,7 @@ class StopsController extends Controller
                             foreach ($stops as $stop) {
                                 if ($stop->id == $routesWithRouteId[$k]->stop_id) {
                                     $stop = [
-                                        "Stop f{$backwardsStopNumber}" => $stop->name,
+                                        "Stop {$backwardsStopNumber}" => $stop->name,
                                     ];
                                     $routesWithStops[$backwardsArrayIndex][$StartingAndFinalDestination][$backwardsStopArrayIndex] = $stop;
                                     $backwardsStopArrayIndex++;
